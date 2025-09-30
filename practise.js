@@ -286,3 +286,30 @@ console.log("D");
 // [-1, -2, -3, -4, -5], target = -8
 // [0, 5, 7], target = 7
 // [1, 2, 3, 4], target = 100
+
+function isPrime(num) {
+  if (num <= 1) return false;
+  if (num === 2) return true;
+  if (num % 2 === 0) return false;
+
+  for (let i = 3; i <= Math.sqrt(num); i += 2) {
+    if (num % i === 0) return false;
+  }
+
+  return true;
+}
+
+// console.log(isPrime(7));
+
+function generatePrimeList(limit) {
+  const primes = [];
+  for (let i = 0; i <= limit; i++) {
+    if (isPrime(i)) {
+      primes.push(i);
+    }
+  }
+
+  return primes;
+}
+
+console.log(generatePrimeList(30));
