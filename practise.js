@@ -234,3 +234,55 @@ function similarPattern(arr) {
 }
 
 console.log(similarPattern(arsimilarPatternr));
+
+console.log(a);
+var a = 10;
+console.log(a);
+
+console.log(a);
+let a = 10;
+console.log(a);
+
+function Example() {
+  console.log(b);
+  var b = 20;
+  console.log(b);
+}
+
+Example();
+function outerFunction(outerValue) {
+  console.log(`Outer function has outerValue: ${outerValue}`);
+
+  function innerFunction(innerValue) {
+    console.log(`Inner function has innerValue: ${innerValue}`);
+    console.log(`Inner function also has access to outerValue: ${outerValue}`);
+  }
+
+  return innerFunction;
+}
+
+const out1 = outerFunction(10);
+const out2 = outerFunction(20);
+
+out1(100);
+out2(200);
+console.log("A");
+
+setTimeout(() => {
+  console.log("B");
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log("C");
+});
+
+console.log("D");
+
+// A C D B
+
+// Two Sum Problem
+// Given an array and a target, return indices of two numbers that add up to the target.
+// Example: [2, 7, 11, 15], target=9 → [0, 1]
+// [-1, -2, -3, -4, -5], target = -8
+// [0, 5, 7], target = 7
+// [1, 2, 3, 4], target = 100
